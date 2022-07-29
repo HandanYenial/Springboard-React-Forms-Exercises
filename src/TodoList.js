@@ -4,6 +4,7 @@ import NewTodoForm from './NewTodoForm'
 import {useState} from 'react'
 import { v4 as uuid } from 'uuid';
 
+
 function TodoList() {
     const initialTodo = [
         {
@@ -28,7 +29,7 @@ function TodoList() {
         setTodos(todos =>todos.filter( todo => todo.id !== id));
     }
   return (
-    <div>
+    <div className= "Todobody">
         <h1 className= "Todo-title"> TodoList </h1>
         {/*Add  the form, so it will display here*/}
         <NewTodoForm addTodo = {addTodo}/>
