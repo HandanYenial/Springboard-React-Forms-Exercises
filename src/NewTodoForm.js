@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from "react"
 
-const NewTodoForm({ addTodo }) => {
+const NewTodoForm = ({ addTodo }) => {
     const initialTodo = { 
         text:"" , 
         completed: false
@@ -16,7 +16,7 @@ const NewTodoForm({ addTodo }) => {
 
     const handleSubmit =(e) =>{
         e.preventDefault();
-        addItem({...todo });
+        addTodo({...todo });
         setTodo(initialTodo);
     }
 
@@ -27,7 +27,7 @@ const NewTodoForm({ addTodo }) => {
             <input
                   id = "todo"
                   type = "text"
-                  name="name"
+                  name="text"
                   placeholder = "Todo"
                   value = {todo.name}
                   onChange = {handleChange}
