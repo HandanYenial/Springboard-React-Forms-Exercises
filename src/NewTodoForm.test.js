@@ -1,12 +1,12 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Todo from "./Todo";
+import NewTodoForm from "./NewTodoForm";
 
 it("renders without crashing", function () {
-  render(<Todo />);
+  render(<NewTodoForm />);
 });
 
 it("matches snapshot", function () {
-  const { asFragment } = render(<Todo />);
+  const { asFragment } = render(<NewTodoForm />);
   expect(asFragment()).toMatchSnapshot();
 });
